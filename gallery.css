@@ -1,0 +1,135 @@
+/* Each half of the source diptych is its own square scene. */
+.renovation-study {
+  color: #202720;
+  background: #eeeee3;
+  padding: clamp(3.25rem, 7vw, 7.5rem) 0;
+}
+.study-layout {
+  display: grid;
+  width: min(90%, 80rem);
+  margin-inline: auto;
+  grid-template-columns: minmax(15rem, .67fr) minmax(0, 1.4fr);
+  gap: clamp(2rem, 5vw, 6rem);
+  align-items: center;
+}
+.study-kicker, .study-label {
+  font: 700 .72rem/1.3 Arial, sans-serif;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.study-kicker { margin: 0 0 1.4rem; }
+.renovation-study h2 {
+  margin: 0;
+  font-size: clamp(2.9rem, 5.2vw, 5.3rem);
+  line-height: .98;
+  letter-spacing: -.055em;
+}
+.renovation-study h2 em { display: block; font: italic 1.06em/.98 Georgia, serif; }
+.study-intro { max-width: 34ch; margin: 1.35rem 0 1.7rem; line-height: 1.55; }
+.study-palette { margin: 0; }
+.study-palette > div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .3rem .65rem;
+  padding-block: .62rem;
+  border-top: 1px solid #b9beb0;
+}
+.study-palette dt { display: flex; align-items: center; gap: .55rem; font-weight: 700; }
+.study-palette dd { color: #475046; margin: 0; font-size: .83rem; }
+.swatch { display: inline-block; width: 1rem; height: 1rem; border: 1px solid #686951; }
+.swatch-oak { background: #ad7949; }
+.swatch-sage { background: #788268; }
+.swatch-ivory { background: #efe5d2; }
+.renovation-study .kitchen-study { margin: 0; min-width: 0; }
+.study-view {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  background: #22261d;
+}
+.study-scene { position: relative; aspect-ratio: 1; overflow: hidden; }
+.study-scene img {
+  position: absolute;
+  display: block;
+  width: 200%;
+  max-width: none;
+  height: auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.study-original img { left: 0; }
+.study-renewed img { right: 0; }
+.study-label {
+  position: absolute;
+  inset-block-start: .8rem;
+  padding: .45rem .65rem;
+  background: #202720;
+  color: #fffef5;
+  white-space: nowrap;
+}
+.study-original .study-label { inset-inline-start: .8rem; }
+.study-renewed .study-label { inset-inline-end: .8rem; color: #202720; background: #d5ee77; }
+.kitchen-study[data-enhanced] .study-view { aspect-ratio: 1.3; display: block; overflow: hidden; }
+.kitchen-study[data-enhanced] .study-scene { position: absolute; inset: 0; aspect-ratio: auto; }
+.kitchen-study[data-enhanced] .study-original {
+  z-index: 1;
+  clip-path: inset(0 calc(100% - var(--before-width, 50%)) 0 0);
+}
+.study-divider {
+  position: absolute;
+  z-index: 2;
+  left: var(--before-width, 50%);
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #f6f3e9;
+  box-shadow: 0 0 4px #202720;
+  pointer-events: none;
+  transform: translateX(-50%);
+}
+.study-divider span {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 2.9rem;
+  height: 2.9rem;
+  border-radius: 50%;
+  border: 2px solid #202720;
+  background: #d5ee77;
+  color: #202720;
+  font: 700 1.45rem/1 Arial, sans-serif;
+}
+.study-view input[type=range] {
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: ew-resize;
+  touch-action: pan-y;
+}
+.study-view:has(input:focus-visible) { outline: 3px solid #202720; outline-offset: 3px; }
+.study-view:has(input:focus-visible) .study-divider span { outline: 3px solid white; outline-offset: 2px; }
+.renovation-study .kitchen-study figcaption {
+  margin: .85rem 0 0;
+  color: #384236;
+  font: .81rem/1.5 Arial, sans-serif;
+}
+#kitchen-guide:not([hidden]) { display: block; margin-bottom: .25rem; font-weight: 700; }
+@media (max-width: 760px) {
+  .study-layout { grid-template-columns: 1fr; gap: 1.5rem; }
+  .study-palette { margin-top: 1rem; }
+  .study-copy h2 em { display: inline; }
+  .study-intro { margin-bottom: 0; max-width: 48ch; }
+}
+@media (max-width: 400px) {
+  .study-label { font-size: .61rem; padding: .4rem; }
+}

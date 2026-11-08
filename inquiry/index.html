@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Property inquiries | AM</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    fieldset { margin: 0; border: 0; padding: 0; }
+    legend { margin-bottom: 1rem; }
+    input, textarea { box-sizing: border-box; width: 100%; font: inherit; padding: .7rem; margin-bottom: 1rem; }
+    textarea { resize: vertical; }
+    button:disabled { cursor: default; }
+  </style>
+  <script src="topic.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="wrap"><a class="brand" href="../" aria-label="AM home">AM</a><a href="../">Back to home</a></header>
+  <main class="wrap statement" id="main">
+    <h1>Contact AM</h1>
+    <p>Ask about selling an older house to AM, buying a renovated home, or renting one.</p>
+    <p class="notice">Form preview. Inquiries will open once AM verifies its receiving inbox.</p>
+    <form class="planner" method="post">
+      <fieldset disabled>
+        <legend>Inquiry details</legend>
+        <label for="topic">What would you like to discuss?</label>
+        <select name="topic" id="topic" required>
+          <option value="">Choose a topic</option>
+          <option value="Seller">Selling a house to AM</option>
+          <option value="Buyer">Buying a home</option>
+          <option value="Renter">Renting a home</option>
+        </select>
+        <label for="email">Your email for a reply</label>
+        <input type="email" autocomplete="email" name="email" id="email" maxlength="254" required>
+        <label for="message">Your question</label>
+        <p id="hint">A general area and preferred timing are helpful. Please leave out financial information and exact addresses.</p>
+        <textarea name="message" id="message" rows="4" maxlength="2000" aria-describedby="hint" required></textarea>
+        <button class="button" type="submit">Send inquiry</button>
+      </fieldset>
+    </form>
+  </main>
+</body>
+</html>

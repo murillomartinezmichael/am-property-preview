@@ -1,22 +1,142 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="description" content="AM buys older houses, renovates them, and brings them back to market for sale or rent. Public website preview."><title>AM | A new chapter for older homes</title><link rel="stylesheet" href="styles.css"><script src="app.js" defer></script></head>
-<body><a class="skip" href="#main">Skip to content</a>
-<div class="draft">Website preview · Contact details and service area pending owner confirmation</div>
-<header class="wrap"><a class="brand" href="./" aria-label="AM home">AM<span>Homes, renewed.</span></a><nav aria-label="Main navigation"><a href="#approach">Our approach</a><a href="#gallery">Concepts</a><a href="#about">About</a><a href="#homes">Buy or rent</a><a class="nav-contact" href="#inquiry">Plan an inquiry</a></nav></header>
-<main id="main">
-<section class="hero wrap"><div class="hero-copy"><p class="intro">Residential investment &amp; renovation</p><h1>A new chapter<br>for older homes.</h1><p class="lead">We buy houses with room for a fresh start, renovate them, and bring them back to life for their next owners or renters.</p><a class="button" href="#gallery">View renovation concepts <span aria-hidden="true">↗</span></a></div><figure class="hero-image"><img src="assets/hero-concept.webp" width="1672" height="941" alt="AI concept of a renovated older home with a covered porch and garden"><figcaption>AI-generated concept. Not an AM property or listing.</figcaption></figure></section>
-<section class="approach wrap" id="approach"><div class="section-heading"><p class="intro">The AM approach</p><h2>See what a house<br>can become.</h2></div><div class="approach-content"><p class="large-copy">An older home can have more life ahead of it. AM focuses on the full journey, from buying a house to preparing it for its next chapter.</p><ol class="steps"><li><span class="step-number">01</span><div><h3>Buy with potential in mind</h3><p>AM buys older houses to renovate. Property fit, location, condition and purchase terms need an individual conversation.</p></div></li><li><span class="step-number">02</span><div><h3>Renovate and repair</h3><p>Remodeling and repairs turn the purchase into a renewed home. The work depends on what each property needs.</p></div></li><li><span class="step-number">03</span><div><h3>Make room for what’s next</h3><p>The finished home can return to the market for sale or become a rental, depending on the property and plan.</p></div></li></ol></div></section>
-<section class="wrap gallery" id="gallery" aria-labelledby="gallery-title">
-  <p class="intro">AM design notebook</p>
-  <h2 id="gallery-title">One kitchen, two possibilities.</h2>
-  <figure class="kitchen-study">
-    <img src="assets/kitchen-study.webp" width="1600" height="800" loading="lazy" alt="Side-by-side AI kitchen concepts. Both retain the sash window and sink. Worn cream cabinets and wallpaper on the left give way to oak, sage paint and ivory tile on the right.">
-    <div class="study-labels" aria-hidden="true"><span>Before concept</span><span>After concept</span></div>
-    <figcaption><strong>AI-generated renovation concepts.</strong> Both views are imagined. Neither depicts a real property, transaction or completed AM renovation.</figcaption>
-  </figure>
-  <p class="material-note">The sash window anchors both designs. In the imagined renovation, oak counters echo its original trim, and pale tile carries daylight across the worktop.</p>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="AM buys older houses, renovates them and brings them back to market for sale or rent. Explore illustrated renovation concepts.">
+  <title>AM | Older houses, reimagined</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="gallery.css">
+  <script src="app.js" defer></script>
+  <script src="gallery.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="masthead">
+    <div class="wrap masthead-inner">
+      <a class="brand" href="./" aria-label="AM home">AM<span class="brand-dot" aria-hidden="true"></span></a>
+      <nav aria-label="Main navigation">
+        <a href="#gallery">Design studies</a>
+        <a href="#about">About AM</a>
+        <a href="#homes">Buy or rent</a>
+        <a class="nav-action" href="#inquiry">Inquiries <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-layout">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="keyline" aria-hidden="true"></span> Property renovation</p>
+          <h1 id="hero-title">Old houses,<br><em>reimagined.</em></h1>
+          <p class="hero-lead">AM buys older houses, gives them a bold renovation, and brings them back to market for sale or rent.</p>
+          <a class="button button-lime" href="#gallery">Explore the transformation <span aria-hidden="true">↓</span></a>
+        </div>
+        <figure class="hero-study">
+          <div class="hero-art">
+            <img class="after-img" src="assets/exterior-after.webp" alt="AI concept of a restored bungalow with a deep green exterior and a renewed porch." width="887" height="887" fetchpriority="high">
+            <span class="photo-tab after-tab">After concept</span>
+            <div class="before-frame">
+              <img src="assets/exterior-before.webp" alt="AI concept of the same bungalow before renovation, with weathered siding." width="384" height="384">
+              <span class="photo-tab">Before concept</span>
+            </div>
+          </div>
+          <figcaption>AI-generated exterior study · Imagined property and renovation.
+            <button class="expand-study" id="open-exterior" type="button" aria-haspopup="dialog" hidden>Compare exteriors <span aria-hidden="true">↗</span></button>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+    <dialog class="exterior-dialog" id="exterior-dialog" aria-labelledby="exterior-title">
+      <div class="dialog-heading">
+        <h2 id="exterior-title">Exterior comparison</h2>
+        <form method="dialog"><button class="dialog-close" autofocus>Close</button></form>
+      </div>
+      <figure>
+        <img src="assets/exterior-study.webp" loading="lazy" width="1500" height="750" alt="Side-by-side bungalow concepts, from peeling cream clapboards to forest-green siding, oak porch posts and a stone path.">
+        <div class="exterior-labels"><span>Before concept</span><span>After concept</span></div>
+        <figcaption>AI-generated concepts. Both views depict an imagined property and renovation.</figcaption>
+      </figure>
+    </dialog>
+    <section class="process wrap" id="about" aria-labelledby="process-title">
+      <div class="process-heading">
+        <p class="eyebrow">About AM</p>
+        <h2 id="process-title">Buy. Rework.<br><em>Sell or rent.</em></h2>
+      </div>
+      <dl class="process-list">
+        <div><dt>Acquire</dt><dd>We buy older houses where repairs and a different use of space could make a real difference.</dd></div>
+        <div><dt>Renovate</dt><dd>We plan around the house itself: what needs fixing, which original details to keep, and where a bolder finish belongs.</dd></div>
+        <div><dt>Return to market</dt><dd>After renovation, we offer the home for sale or keep it as a rental.</dd></div>
+      </dl>
+    </section>
+<section class="renovation-study" id="gallery" aria-labelledby="gallery-title">
+  <div class="study-layout">
+    <div class="study-copy">
+      <p class="study-kicker">Renovation concepts</p>
+      <h2 id="gallery-title">Keep the window.<br><em>Rework the room.</em></h2>
+      <p class="study-intro">Keep the deep sash window and the sink beneath it. Change what surrounds them, and the whole room feels different.</p>
+      <dl class="study-palette">
+        <div><dt><i class="swatch swatch-oak" aria-hidden="true"></i>Oak</dt><dd>Warmth across the worktop</dd></div>
+        <div><dt><i class="swatch swatch-sage" aria-hidden="true"></i>Sage</dt><dd>Color on the lower cabinets</dd></div>
+        <div><dt><i class="swatch swatch-ivory" aria-hidden="true"></i>Ivory tile</dt><dd>A lighter wall behind the sink</dd></div>
+      </dl>
+    </div>
+    <figure class="kitchen-study">
+      <div class="study-view">
+        <div class="study-scene study-original">
+          <img src="assets/kitchen-study.webp" loading="lazy" decoding="async" width="1600" height="800" alt="Before concept: chipped cream cabinets, worn laminate and floral wallpaper around the sink.">
+          <span class="study-label">Before concept</span>
+        </div>
+        <div class="study-scene study-renewed">
+          <img src="assets/kitchen-study.webp" loading="lazy" decoding="async" width="1600" height="800" alt="After concept: the same sash window framed by oak cabinets, ivory tile and sage-painted drawers.">
+          <span class="study-label">After concept</span>
+        </div>
+        <div class="study-divider" aria-hidden="true" hidden><span>↔</span></div>
+        <input type="range" id="kitchen-reveal" min="0" max="100" step="1" value="50" aria-label="Compare before and after kitchen concepts" aria-describedby="kitchen-guide" hidden>
+      </div>
+      <figcaption>
+        <span id="kitchen-guide" hidden>Drag the divider or use the arrow keys.</span>
+        <span><strong>AI-generated concepts.</strong> Both views depict an imagined home.</span>
+      </figcaption>
+    </figure>
+  </div>
 </section>
-<section class="homes" id="homes"><div class="wrap homes-inner"><div><p class="intro">The next chapter</p><h2>A home to own.<br>A place to rent.</h2><p>AM’s work can lead to either. A renovated house may be offered for sale or held as a rental.</p></div><div class="availability"><h3>Property availability</h3><p>No verified sale or rental listings have been supplied for this website draft.</p><div class="paths"><div><h4>Homes for sale</h4><p>Listings will appear only when property details and availability are confirmed.</p></div><div><h4>Homes for rent</h4><p>Rental details, requirements and contact information are pending confirmation.</p></div></div><p class="small">This page is not an offer to sell or lease a property.</p></div></div></section>
-<section class="inquiry wrap" id="inquiry"><div><p class="intro">Start with a few details</p><h2>Prepare your<br>conversation.</h2><p>Thinking about selling an older house, buying a renovated home, or finding a rental? Make a short checklist for when AM’s contact details are ready.</p><p class="notice"><strong>Contact is not live yet.</strong><br>This tool stays in your browser. Nothing is sent or saved. Do not enter an address, financial information or other private details.</p></div><div class="planner"><label for="interest">What would you like to discuss?</label><select id="interest"><option value="sell">Selling a house to AM</option><option value="buy">Buying a renovated home</option><option value="rent">Renting a home</option></select><button class="button" id="prepare" type="button">Build my checklist</button><div id="checklist" class="checklist" role="status" aria-live="polite"><h3>Your next step</h3><p>Choose a topic and build a checklist. You can review it here without submitting any information.</p></div><noscript><p>JavaScript is off. Prepare your general location, preferred timing and questions for AM. Confirm contact details with the owner before sharing personal information.</p></noscript></div></section>
-<section class="approach wrap" id="about"><div><p class="intro">About AM</p><h2>Working with what’s here.</h2></div><p class="large-copy">AM is a real estate investment and renovation company focused on older houses. We buy the house ourselves, plan repairs around the building, and prepare it for its next owner or renter.</p></section>
-</main><footer class="wrap"><a class="brand" href="./">AM<span>Homes, renewed.</span></a><p>Independent property acquisition, renovation, resale and rental business.</p><div><a href="accessibility/">Accessibility</a><span class="footer-note">Public preview</span></div></footer></body></html>
+    <section class="paths-section" id="homes" aria-labelledby="homes-title">
+      <div class="wrap">
+        <p class="eyebrow">Buying &amp; renting</p>
+        <h2 id="homes-title">The next move.</h2>
+        <div class="paths">
+          <article><h3>Buy a renovated home.</h3><p>Ask about the area, layout and renovation details that matter to you.</p><a href="#inquiry" data-topic="buy">Plan a buyer inquiry <span aria-hidden="true">↗</span></a></article>
+          <article><h3>Rent a renewed home.</h3><p>Prepare questions about a potential rental, its features and your preferred move-in date.</p><a href="#inquiry" data-topic="rent">Plan a renter inquiry <span aria-hidden="true">↗</span></a></article>
+        </div>
+        <p class="availability-note">Sale and rental availability: awaiting verified listings.</p>
+      </div>
+    </section>
+    <section class="inquiry wrap" id="inquiry" aria-labelledby="inquiry-title">
+      <div><p class="eyebrow">Seller, buyer &amp; renter inquiries</p>
+        <h2 id="inquiry-title">Talk property<br><em>with AM.</em></h2>
+        <p class="measure">Have an older house to sell or a renewed home in mind? Pick a topic for a short checklist.</p>
+        <p class="notice"><strong>Contact is not live yet.</strong><br>AM’s service area and private inquiry destination are pending confirmation.</p>
+        <a class="text-link" href="inquiry/">Preview the inquiry form <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="planner">
+        <label for="interest">What brings you here?</label>
+        <select id="interest">
+          <option value="sell">Selling an older house to AM</option>
+          <option value="buy">Buying a renovated home</option>
+          <option value="rent">Renting a home</option>
+        </select>
+        <button class="button" id="prepare" type="button">Build my checklist <span aria-hidden="true">→</span></button>
+        <div id="checklist" aria-live="polite" role="status"><p>Choose a topic to see which details to prepare.</p></div>
+        <noscript><p>JavaScript is off. Prepare your general area, timing and questions about the house.</p></noscript>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap footer-inner">
+    <a class="brand" href="./" aria-label="AM home">AM<span class="brand-dot" aria-hidden="true"></span></a>
+    <span>Residential acquisition &amp; renovation</span>
+    <a href="accessibility/">Accessibility</a>
+  </div></footer>
+</body>
+</html>

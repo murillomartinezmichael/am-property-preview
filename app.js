@@ -1,9 +1,48 @@
-const lists={sell:['General area and type of house','Repairs or renovations you already know about','Your preferred timing and questions about the process'],buy:['General area you are considering','The home features that matter to you','Your preferred timing and questions about future availability'],rent:['General area you are considering','The home features that matter to you','Your preferred move-in timing and questions about future rental requirements']};
-document.querySelector('#prepare')?.addEventListener('click',()=>{
- const topic=document.querySelector('#interest');
- const output=document.querySelector('#checklist');
- output.replaceChildren();
- const heading=document.createElement('h3');heading.textContent=topic.options[topic.selectedIndex].text;output.append(heading);
- const list=document.createElement('ul');for(const text of lists[topic.value]){const item=document.createElement('li');item.textContent=text;list.append(item);}output.append(list);
- const note=document.createElement('p');note.textContent='Checklist ready. Nothing was sent or saved. Contact details are pending owner confirmation.';output.append(note);
-});
+const checklists = {
+  sell: ['General area and type of house', 'Repairs or renovations you know about', 'Your preferred timing and questions about selling'],
+  buy: ['General area you are considering', 'The home features that matter to you', 'Your timing and questions about future availability'],
+  rent: ['General area you are considering', 'The home features that matter to you', 'Your move-in timing and questions about rental requirements']
+};
+
+const interest = document.querySelector('#interest');
+const output = document.querySelector('#checklist');
+
+const inquiryLink = document.querySelector('a[href="inquiry/"]');
+const formTopics = { sell: 'Seller', buy: 'Buyer', rent: 'Renter' };
+function syncInquiryLink() {
+  inquiryLink.href = 'inquiry/?topic=' + formTopics[interest.value];
+}
+syncInquiryLink();
+
+function showChecklist() {
+  syncInquiryLink();
+  const heading = document.createElement('h3');
+  heading.textContent = interest.selectedOptions[0].textContent;
+
+  const list = document.createElement('ul');
+  for (const detail of checklists[interest.value]) {
+    const item = document.createElement('li');
+    item.textContent = detail;
+    list.append(item);
+  }
+
+  const note = document.createElement('p');
+  note.textContent = 'Nothing was sent or saved.';
+  output.replaceChildren(heading, list, note);
+}
+
+document.querySelector('#prepare').addEventListener('click', showChecklist);
+interest.addEventListener('change', showChecklist);
+for (const link of document.querySelectorAll('[data-topic]')) {
+  link.addEventListener('click', () => {
+    interest.value = link.dataset.topic;
+    showChecklist();
+  });
+}
+
+const exteriorDialog = document.querySelector('#exterior-dialog');
+const openExterior = document.querySelector('#open-exterior');
+if (typeof exteriorDialog.showModal === 'function') {
+  openExterior.hidden = false;
+  openExterior.addEventListener('click', () => exteriorDialog.showModal());
+}
