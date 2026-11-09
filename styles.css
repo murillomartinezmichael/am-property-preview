@@ -117,3 +117,6 @@ header.wrap .brand span { display: none; }
 .dialog-close { padding: .5rem 1rem; cursor: pointer; background: var(--ink); color: var(--white); border: 0; }
 .exterior-labels { background: var(--ink); color: var(--paper); padding: .4rem .75rem; font-weight: 700; font-size: .82rem; }
 .exterior-dialog figcaption { margin-top: .75rem; font-size: .85rem; }
+
+.thumb-trigger { position: absolute; inset: 0; z-index: 1; background: transparent; border: 0; cursor: pointer; }
+.expand-study { min-height: 44px; }

@@ -133,3 +133,10 @@
 @media (max-width: 400px) {
   .study-label { font-size: .61rem; padding: .4rem; }
 }
+
+@media (min-width: 761px) {
+  .study-layout { row-gap: 0; }
+  .study-copy { align-self: end; }
+  .study-palette { grid-column: 1; grid-row: 2; align-self: start; }
+  .kitchen-study { grid-column: 2; grid-row: 1 / span 2; }
+}

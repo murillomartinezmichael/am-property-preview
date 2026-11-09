@@ -43,6 +43,8 @@ for (const link of document.querySelectorAll('[data-topic]')) {
 const exteriorDialog = document.querySelector('#exterior-dialog');
 const openExterior = document.querySelector('#open-exterior');
 if (typeof exteriorDialog.showModal === 'function') {
-  openExterior.hidden = false;
-  openExterior.addEventListener('click', () => exteriorDialog.showModal());
+  for (const trigger of [openExterior, document.querySelector('.thumb-trigger')]) {
+    trigger.hidden = false;
+    trigger.addEventListener('click', () => exteriorDialog.showModal());
+  }
 }
