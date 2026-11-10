@@ -11,6 +11,7 @@
     legend { margin-bottom: 1rem; }
     input, textarea { box-sizing: border-box; width: 100%; font: inherit; padding: .7rem; margin-bottom: 1rem; }
     textarea { resize: vertical; }
+    #delivery-status:not(:empty) { margin-block: 1.25rem .5rem; border-left: 3px solid #788268; padding-left: .8rem; }
     button:disabled { cursor: default; }
   </style>
   <script src="topic.js" defer></script>
@@ -39,6 +40,8 @@
         <textarea name="message" id="message" rows="4" maxlength="2000" aria-describedby="hint" required></textarea>
         <button class="button" type="submit">Send inquiry</button>
       </fieldset>
+      <p id="delivery-status" role="status" aria-live="polite"></p>
+      <a href="../" id="delivery-home" hidden>Return to AM</a>
     </form>
   </main>
 </body>
